@@ -20,3 +20,5 @@ done
 #   #echo $Name | awk '{print $2}'
 #    
 #done
+FIRST_NODE=`kubectl get node | awk 'FNR==2{print $1}'`
+SECOND_NODE=`kubectl get node | awk 'FNR==3{print $1}'`
